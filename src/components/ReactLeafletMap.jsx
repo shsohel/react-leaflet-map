@@ -23,10 +23,6 @@ const icon = L.icon({
 });
 
 
-
-
-
-
 function ReactLeafletMap() {
   const pt = {
     lat: 22.496660999051866,
