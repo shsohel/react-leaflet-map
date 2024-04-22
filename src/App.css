@@ -1,0 +1,53 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+
+.main-app-container{
+  position: relative;
+}
+.leaflet-container {
+  height: 100vh;
+}
+
+.search-container{
+  padding: 6px;
+  border-radius: 0.2rem;
+  background-color: white;
+  width: 240px;
+  position: absolute;
+  right: 20px;
+  top: 50px;
+
+  z-index: 9999;
+ 
+}
+.input-box{
+  display: flex;
+  width: 240px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.input-box> input{
+  border: 1px solid silver !important;
+  /* outline: 1 solid gainsboro !important; */
+  height: 26px;
+  padding: 1px !important;
+  outline: none;
+}
+.input-box> button{
+ border:  1px solid silver !important;
+
+  height: 30px;
+}
+.location-list{
+  font: bold;
+  font-size: 12px;
+}
+
+.location-list>ul>li{
+  cursor: pointer;
+}
