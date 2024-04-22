@@ -12,21 +12,26 @@ const SearchLocation = ({ setPosition }) => {
       q: search,
       format: "json",
       addressdetails: 1,
-      polygon_geojson: 1
+      polygon_geojson: 1,
     };
     const urlQueryString = new URLSearchParams(params);
-    axios.get(`${api}${urlQueryString}`).then((response) => {
-      console.log(response);
-      setLocationList(response.data);
-    });
+    axios
+      .get(`${api}${urlQueryString}`)
+      .then((response) => {
+        setLocationList(response.data);
+      })
+      .catch((error) => {
+        const { response } = error;
+        console.table(response);
+        console.log(error);
+      });
   };
 
   const handleListOnClick = (location) => {
-    console.log(location);
     const { lat, lon } = location;
     setPosition({
       lat,
-      lng: lon
+      lng: lon,
     });
   };
 
